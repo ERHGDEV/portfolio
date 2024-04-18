@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
+import SocialPill from '../components/SocialPill.astro';
+import GitHubIcon from '../components/icons/GitHubIcon.astro';
+import MailIcon from '../components/icons/MailIcon.astro';
+---
+
+<Layout title="Portfolio de ERHGDEV Desarrollador Web">
+	<main>
+		<section class="w-full lg:w-[740px] mx-auto py-44">
+
+			<img 
+				class="rounded-full w-12 h-12 mb-4" 
+				src="/ERHG foto.jpg" 
+				alt="ERHG foto" 
+			/>
+
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, soy Erick <a 
+					href="https://www.linkedin.com/in/erhg/" 
+					target="_black"
+					rel="noopener" 
+					class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span>+ años de experiencia.</span>
+				<span class="text-yellow-200/90"> Desarrollador Web.</span>
+				<span class="text-green-200/90"> De Chihuahua, México.</span>
+				<span class="opacity-80"> Especializado en detectar y solucionar problemas.</span>
+			</h2>
+			<nav class="flex gap-x-4 mt-8">
+				<SocialPill href="https://www.linkedin.com/in/erhg/">
+					<LinkedInIcon class="w-6 h-6"/>
+					LinkedIn
+				</SocialPill>	
+				<SocialPill href="https://github.com/ERHGDEV">
+					<GitHubIcon class="w-6 h-6"/>
+					Github
+				</SocialPill>
+				<SocialPill href="mailto:erhgdev@gmail.com">
+					<MailIcon class="w-6 h-6"/>
+					erhgdev@gmail.com
+				</SocialPill>		
+			</nav>			
+		</section>
+	</main>
+</Layout>
+
