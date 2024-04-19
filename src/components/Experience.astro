@@ -1,0 +1,46 @@
+---
+import ExperienceItems from "./ExperienceItems.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'jul. 2022 - actualidad',
+        title: 'Consultor de mesa de servicio - Tecnología de Gestión y Comunicación',
+        description: 'Proporciono el primer contacto de soporte, priorizando la satisfacción del cliente.',
+        
+    },
+    {
+        date: 'oct. 2023 - mar. 2023',
+        title: 'Prestador de servicio social - ICATECH',
+        description: 'Mi responsabilidad principal fue desarrollar recursos educativos innovadores que apoyaran el proceso de enseñanza y aprendizaje de los participantes.',
+        
+    },
+    {
+        date: 'ago. 2019 - julio 2022',
+        title: 'Instructor de capacitación - Profuturo Afore',
+        description: 'Impartí programas formativos que impulsaron el desarrollo profesional de los colaboradores. ',
+        
+    },
+    {
+        date: 'mayo 2015 - julio 2019',
+        title: 'Asesor patrimonial - Profuturo Afore',
+        description: 'Me especialicé en proporcionar asesoramiento financiero personalizado, guiando a clientes corporativos en la planificación de su retiro y la toma de decisiones informadas sobre inversiones. ',
+        
+    },
+    {
+        date: 'abril 2010 - abril 2015',
+        title: 'Supervisor de operaciones - Servifon',
+        description: 'Lideré equipos de ventas en un entorno de call center, cumpliendo y superando los objetivos establecidos.',
+        
+    }
+]
+---
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItems { ... experience}/>
+            </li>
+        ))
+    }
+</ol>
+
