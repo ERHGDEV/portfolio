@@ -1,34 +1,39 @@
 ---
 import Header from '../components/Header.astro';
 import '@fontsource-variable/onest';
+import { ViewTransitions } from 'astro:transitions';
+import Footer from '../components/Footer.astro'
 
 interface Props {
 	title: string;
+	description: string
 }
 
-const { title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
-	<body class="bg-neutral-950">
-		<div class="absolute top-0 z-[-2] 
-			h-screen w-screen 
-			bg-neutral-950 
+	<body class="relative">
+		<div class="absolute top-0 bottom-0 z-[-2] 
+			min-h-screen w-full 
+			bg-gray-950
 			bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 		>
 		</div>
 
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -50,9 +55,33 @@ const { title } = Astro.props;
 		
 	}
 
+	#header-nav {
+    animation: blur linear both 0.5s;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  	}
+
+	@keyframes blur {
+		to {
+		backdrop-filter: blur(20px);
+		border-width: 1px;
+		border-color: rgba(0, 0, 0);
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		padding-top: 0.25rem;
+		padding-bottom: 0.25rem;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		background-color: rgb(229, 229, 229);
+		border-radius: 9999px;
+		}
+	}
+
 	@media (prefers-reduce-motion: reduce) {
 		html {
 			scroll-behavior: auto;
 		}
 	}
+
 </style>

@@ -1,78 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
-import SocialPill from '../components/SocialPill.astro';
-import GitHubIcon from '../components/icons/GitHubIcon.astro';
-import MailIcon from '../components/icons/MailIcon.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import BriefCase from '../components/icons/BriefCase.astro';
-import Footer from '../components/Footer.astro'
 import Projects from '../components/Projects.astro'
 import CodeIcon from '../components/icons/CodeIcon.astro';
+import AboutMe from '../components/AboutMe.astro';
+import ProfileCheck from '../components/icons/ProfileCheck.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<Layout title="Portfolio de ERHGDEV Desarrollador Web">
+<Layout 
+	title="Portfolio de ERHGDEV Desarrollador Web"
+	description="Erick Ricardo Hernández García ERHG Ingeniero de Software Desarrollador Web Especializado en detectar y solucionar problemas"
+>
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-32">
-
-			<img 
-				class="rounded-full w-20 h-20 mb-4" 
-				src="/ERHG foto.jpg" 
-				alt="ERHG foto" 
-			/>
-
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hola, soy Erick <a 
-					href="https://www.linkedin.com/in/erhg/" 
-					target="_black"
-					rel="noopener" 
-					class="flex justify-center items-center">
-					<Badge>Disponible para trabajar</Badge>
-				</a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[740px]">
-				<span>Ingenierio de Software.</span>
-				<span class="text-yellow-200/90"> Desarrollador Web.</span>
-				<span class="text-green-200/90"> De Chihuahua, México.</span>
-				<span class="opacity-80"> Especializado en detectar y solucionar problemas.</span>
-			</h2>
-			<nav class="flex gap-4 mt-8 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/erhg/">
-					<LinkedInIcon class="size-4 md:size-6"/>
-					LinkedIn
-				</SocialPill>	
-				<SocialPill href="https://github.com/ERHGDEV">
-					<GitHubIcon class="size-4 md:size-6"/>
-					Github
-				</SocialPill>
-				<SocialPill href="mailto:erhgdev@gmail.com">
-					<MailIcon class="size-4 md:size-6"/>
-					erhgdev@gmail.com
-				</SocialPill>		
-			</nav>			
+		
+		<SectionContainer class="py-16 md:py-36">
+			<Hero>
+			</slot>
+		  </Hero>
 		</SectionContainer>
 
+	<div class="space-y-24">
+
 		<SectionContainer id="experiencia">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
-				<BriefCase class="size-7"/>
+			<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white">
+				<BriefCase class="size-8"/>
 				Experiencia laboral
 			</h2>
 			<Experience />
 		</SectionContainer>
 
 		<SectionContainer id="proyectos">
-			<h2 class="text-3xl font-semibold mb-6 flex gap-x-2 items-center">
+			<h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white">
 				<CodeIcon class="size-7"/>
 				Proyectos
 			</h2>
 			<Projects />
 		</SectionContainer>
 
-
-		<Footer />
+		<SectionContainer id="sobre-mi">
+			<h2
+			  class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white"
+			>
+			  <ProfileCheck class="size-8" />
+			  Sobre mi
+			</h2>
+			<AboutMe />
+		  </SectionContainer>
+	</div>
 	</main>
 </Layout>
 
