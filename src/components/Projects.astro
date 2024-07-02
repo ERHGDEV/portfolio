@@ -5,6 +5,10 @@ import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
 import GitHubIcon from "./icons/GitHubIcon.astro"
 import LinkButton from "./LinkButton.astro"
 import Link from "./icons/Link.astro"
+import ReactIcon from "./icons/ReactIcon.astro"
+import NodejsIcon from "./icons/NodejsIcon.astro"
+import MongoDBIcon from "./icons/MongoDBIcon.astro"
+import ExpressIcon from "./icons/ExpressIcon.astro"
 
 const TAGS = {
     HTML: {
@@ -21,6 +25,26 @@ const TAGS = {
         name: "JavaScript",
         class: "bg-white/20",
         icon: JavaScriptIcon
+    },
+    React: {
+        name: "React",
+        class: "bg-white/20",
+        icon: ReactIcon
+    },
+    Nodejs: {
+        name: "Node.js",
+        class: "bg-white/20",
+        icon: NodejsIcon
+    },
+    MongoDB: {
+        name: "MongoDB",
+        class: "bg-white/20",
+        icon: MongoDBIcon
+    },
+    Expressjs: {
+        name: "Express.js",
+        class: "bg-white/20",
+        icon: ExpressIcon
     }
 }
 
@@ -32,6 +56,19 @@ const PROJECTS = [
         github: 'https://github.com/ERHGDEV/pensionL73',
         image: '/projects/pension.webp',
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]       
+    },
+    {
+        title: 'Agenda telefónica',
+        description: 'Proyecto con el que estoy aprendiendo actualmente React.',
+        link: 'https://agenda-back-eg5d.onrender.com/',
+        github: 'https://github.com/ERHGDEV/agenda_back',
+        image: '/projects/agenda.webp',
+        tags: [        
+          TAGS.MongoDB,
+          TAGS.Expressjs,
+          TAGS.React, 
+          TAGS.Nodejs
+        ]       
     }
 ]
 ---
