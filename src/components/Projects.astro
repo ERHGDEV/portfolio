@@ -54,7 +54,7 @@ const PROJECTS = [
       description: 'Front para el registro de viajes para empresa de transporte turístico.',
       link: 'https://trips-front.vercel.app/',
       github: 'https://github.com/ERHGDEV/trips_front',
-      image: '/projects/tripsFront.webp',
+      image: './images/tripsFront.webp',
       tags: [TAGS.React]
        
     },
@@ -63,34 +63,21 @@ const PROJECTS = [
       description: 'API para manejar el registro de viajes para los operadores de una empresa de transporte turístico. ¡Adaptala a tus necesidades!',
       link: 'https://trip-api-henna.vercel.app',
       github: 'https://github.com/ERHGDEV/trips_api',
-      image: '/projects/apitrips.webp',
+      image: './images/apitrips.webp',
       tags: [
         TAGS.MongoDB,
         TAGS.Expressjs,
         TAGS.Nodejs
       ]       
-    }/* ,
-    {
+    },
+/*     {
       title: 'Calculadora de pensión',
       description: 'Te permite realizar la proyección de pensión para trabajadores IMSS de Ley 73, además de generar el reporte detallado del cálculo.',
       link: 'https://pensionley73.vercel.app/',
       github: 'https://github.com/ERHGDEV/pensionL73',
-      image: '/projects/pension.webp',
+      image: './images/pension.webp',
       tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
-    },
-    {
-        title: 'Agenda telefónica',
-        description: 'Proyecto con el que estoy aprendiendo actualmente React.',
-        link: 'https://agenda-front-tawny.vercel.app/',
-        github: 'https://github.com/ERHGDEV/agenda_back',
-        image: '/projects/agenda.webp',
-        tags: [        
-          TAGS.MongoDB,
-          TAGS.Expressjs,
-          TAGS.React, 
-          TAGS.Nodejs
-        ]       
-    }  */
+    } */
 ]
 ---
 
@@ -103,7 +90,7 @@ const PROJECTS = [
                 gap-8 transition duration-500 ease-in-out transform shadow-xl 
                 overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl 
                 lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="" class="object-cover object-top transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
