@@ -9,6 +9,8 @@ import ReactIcon from "./icons/ReactIcon.astro"
 import NodejsIcon from "./icons/NodejsIcon.astro"
 import MongoDBIcon from "./icons/MongoDBIcon.astro"
 import ExpressIcon from "./icons/ExpressIcon.astro"
+import AstroIcon from "./icons/AstroIcon.astro"
+import TailwildIcon from "./icons/TailwildIcon.astro"
 
 const TAGS = {
     HTML: {
@@ -45,6 +47,16 @@ const TAGS = {
         name: "Express.js",
         class: "bg-white/20",
         icon: ExpressIcon
+    },
+    Astro: {
+        name: "Astro",
+        class: "bg-white/20",
+        icon: AstroIcon
+    },
+    Tailwild: {
+        name: "Tailwild CSS",
+        class: "bg-white/20",
+        icon: TailwildIcon
     }
 }
 
@@ -56,6 +68,14 @@ const PROJECTS = [
       github: 'https://github.com/ERHGDEV/trips_front',
       image: '/projects/tripsFront.webp',
       tags: [TAGS.React, TAGS.CSS]       
+    },
+    {
+      title: 'Landing Torneado en Madera',
+      description: 'Landing page desarrollada con Astro y Tailwind.',
+      /* link: 'https://trips-front.vercel.app/', */
+      github: 'https://github.com/ERHGDEV/rhtornero',
+      image: '/projects/rhtornero.webp',
+      tags: [TAGS.Astro, TAGS.Tailwild]       
     },
     {
       title: 'Trips API',
