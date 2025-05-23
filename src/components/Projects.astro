@@ -65,19 +65,30 @@ const PROJECTS = [
     title: 'Pensiona-T',
     description: 'Plataforma de proyección de pensión, con más de 500 usuarios actualmente. Ofrece autenticación segura, integración con Mercado Pago y una interfaz intuitiva para facilitar la planificación del retiro.',
     link: 'https://pensiona-t.com/',
-    /* github: 'https://github.com/ERHGDEV/pensiona-t_front', */
+    github: 'https://github.com/ERHGDEV/pensiona-t_front',
     image: '/projects/pensiona-t.webp',
     tags: [
       TAGS.React,
       TAGS.Tailwild
     ]       
+  },
+  {
+    title: 'Pensiona-T API',
+    description: 'Backend que gestiona la autenticación, administración de usuarios y control de accesos, garantizando un manejo seguro y eficiente de los datos relacionados con pensiones. Incluye integración con Mercado Pago.',
+    github: 'https://github.com/ERHGDEV/pensiona-t_back',
+    image: '/projects/pensiona-t-back.webp',
+    tags: [
+      TAGS.MongoDB,
+      TAGS.Expressjs,
+      TAGS.Nodejs
+    ]
   }
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
     {
-      PROJECTS.map(({ image, title, description, tags, link }) => (
+      PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 
@@ -107,13 +118,13 @@ const PROJECTS = [
           </ul>
           <div class="mt-2 text-gray-200">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-            {/* {github && (
+            {github && (
               <LinkButton href={github}>
                 <GitHubIcon class="size-6" />
                 Code
 
             </LinkButton>
-          )} */}
+          )}
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
